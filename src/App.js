@@ -45,15 +45,15 @@ function App() {
       <div className='weather-box'>
       {weather && <div>
         <h1 className='date'>{date}</h1>
-        <img src={weather.current.condition.icon}></img>
         <h1 className='town'>{weather.location.name}</h1>
-        <h1 className='temp'>{weather.current.temp_c}°C</h1>
-        <h3>Feels like: {weather.current.feelslike_c}°C</h3>
-        <h3>Humidity: {weather.current.humidity}%</h3>
+        <img src={weather.current.condition.icon}></img>
         <h1 className='condition'>{weather.current.condition.text}</h1>
+        <h1 className='temp'>{weather.current.temp_c}°C</h1>
+        <h3 className='details feels-like'>Feels like: {weather.current.feelslike_c}°C</h3>
+        <h3 className='details humidity'>Humidity: {weather.current.humidity}%</h3>
       </div>}
       </div>
-     
+     <footer className='footer'><p>Made By FreeDOM</p></footer>
     </div>
   );
 }
